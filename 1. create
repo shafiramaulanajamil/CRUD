@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tambah Rekap</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Custom styles for the page */
+        body {
+            background-color: white; /* Set background color to white */
+            font-family: 'Roboto', sans-serif;
+            font-size: 18px;
+        }
+
+        h1 {
+            color: #361509; /* Match title color */
+            font-weight: bold;
+            font-size: 28px;
+        }
+
+        /* Style the form */
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        /* Match button style with "Tambah Rekap" */
+        .btn-tambah {
+            background-color: #A38068; /* Match button background color */
+            color: white;
+            font-weight: bold;
+            font-size: 20px; /* Slightly larger font size */
+            padding: 10px 20px; /* Adjust padding for a smaller button */
+            width: auto; /* Let the button size adjust to content */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Tambah Rekap</h1>
+        <form action="{{ route('rekap.store') }}" method="POST" class="mt-4">
+            @csrf
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama">
+            </div>
+            <div class="form-group">
+                <label for="barang">Barang:</label>
+                <input type="text" class="form-control" id="barang" name="barang">
+            </div>
+            <div class="form-group">
+                <label for="harga">Harga:</label>
+                <input type="text" class="form-control" id="harga" name="harga">
+            </div>
+            <div class="form-group">
+                <label for="total">Total:</label>
+                <input type="text" class="form-control" id="total" name="total">
+            </div>
+            <div class="form-group">
+                <label for="keterangan">Keterangan:</label>
+                <input type="text" class="form-control" id="keterangan" name="keterangan">
+            </div>
+            <button type="submit" class="btn btn-tambah">Simpan</button>
+        </form>
+    </div>
+</body>
+</html>
