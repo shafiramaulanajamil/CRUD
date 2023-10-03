@@ -1,0 +1,26 @@
+CRUD
+-menghidupkan xampp
+-membuka phpmyadmin
+-membuat database (onlineshop)
+-membuat folder baru (CRUD LARAVEL)
+-membuka folder nya dan masuk ke terimal (untuk instalasi)
+-“composer create-project laravel/laravel . “
+-“code . “ enter (masuk ke vscode)
+-membuka file .env dan merubah nama databasenya
+-buka terminal baru (php artisan make:migration create_rekap_table)
+-buka file database, migration, bawah sendiri
+$table->string('nama', 50);
+            $table->string('barang', 100);
+            $table->double('harga');
+            $table->double('total');
+            $table->string('keterangan', 255);
+-teriminal (php artisan migrate) dan (php artisan make:model Rekap)
+-buka file models, rekap.php tambahkan: protected $table = 'rekap';
+    protected $fillable = [
+        'nama', 'barang', 'harga', 'total', 'keterangan',
+    ];
+- teriminal (php artisan make:controller RekapController)
+-buka file http, controllers (tambahkan code controllers pada githup)
+-lalu ke file resource, views, tambahkan folder rekap dengan isi file create, edit, index.blade.php (tambahkan code pada githup) 
+-terimal (php artisan serve)
+-cek ke chrome sesuai dengan link yg muncul
